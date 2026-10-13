@@ -3,22 +3,121 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tweak Apps</title>
+<title>Tweak — Games &amp; Apps</title>
+<meta name="description" content="Tweak is an indie studio making polished mobile games and apps: Zesty Swap, Storm Saucer and PennyPing.">
+<meta name="theme-color" content="#0b0d17">
+<meta property="og:title" content="Tweak — Games &amp; Apps">
+<meta property="og:description" content="Indie mobile games and apps: Zesty Swap, Storm Saucer, PennyPing.">
+<meta property="og:image" content="https://tweak36.github.io/assets/zesty/feature.webp">
+<meta property="og:url" content="https://tweak36.github.io/">
+<link rel="icon" href="/favicon.png">
 <style>
-body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:640px;margin:3rem auto;padding:0 1.25rem;color:#222;line-height:1.6}
-h1{font-size:1.8rem;margin-bottom:1.5rem}
-.app{border:1px solid #e3e3e3;border-radius:10px;padding:1rem 1.25rem;margin-bottom:1rem}
-.app h2{margin:0 0 .25rem;font-size:1.2rem}
-a{color:#0b6bcb}
-.app img{float:left;width:64px;height:64px;border-radius:14px;margin:0 1rem .25rem 0}
-.app::after{content:"";display:block;clear:both}
-.soon{font-size:.85rem;color:#666;font-style:italic}
+:root{--bg:#0b0d17;--panel:#141828;--panel2:#1b2036;--text:#eef1fb;--muted:#a3abc6;--line:#2a3150;--accent:#ffd34d;--accent2:#7cf7c8;--radius:18px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Inter,sans-serif;background:var(--bg);color:var(--text)}
+a{color:var(--accent2)} a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px} .skip:focus{left:12px;top:12px;background:#000;padding:8px 12px;z-index:9}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+header.top{position:sticky;top:0;z-index:5;background:rgba(11,13,23,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-weight:900;letter-spacing:.5px;font-size:1.2rem;color:var(--text);text-decoration:none} .brand span{color:var(--accent)}
+nav a{color:var(--muted);text-decoration:none;margin-left:16px;font-weight:600;font-size:.95rem} nav a:hover{color:var(--text)}
+@media(max-width:560px){nav a:not(.cta){display:none}}
+.hero{padding:72px 0 40px;background:radial-gradient(800px 400px at 15% 0%,#2a2260 0,transparent 60%),radial-gradient(700px 400px at 90% 10%,#0f4a46 0,transparent 60%)}
+.hero h1{font-size:clamp(2.2rem,6vw,4rem);line-height:1.05;margin:0 0 14px;letter-spacing:-1px}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--accent),#ff8a5b);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--muted);font-size:1.15rem;max-width:640px;margin:0 0 26px}
+.icons{display:flex;gap:14px;margin-top:28px} .icons img{width:64px;height:64px;border-radius:16px;box-shadow:0 8px 24px #0008}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;font-weight:800;text-decoration:none;border:1px solid var(--line);color:var(--text);background:var(--panel2)}
+.btn.primary{background:var(--accent);color:#1a1405;border-color:transparent} .btn+.btn{margin-left:10px}
+section.app{margin:28px 0;padding:28px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius)}
+.app-head{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.app-head img{width:88px;height:88px;border-radius:22px;box-shadow:0 10px 30px #0009}
+.app-head h2{margin:0;font-size:1.8rem} .tag{margin:2px 0 0;color:var(--accent);font-weight:700}
+.badge{display:inline-block;font-size:.78rem;font-weight:800;letter-spacing:.4px;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-left:auto}
+.badge.test{background:#3a2e08;color:var(--accent);border:1px solid #6b5410} .badge.soon{background:#0d3a32;color:var(--accent2);border:1px solid #1d6a5a}
+.desc{color:#d3d8ea;max-width:820px} .desc ul{padding-left:20px;margin:8px 0}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 4px} .links .btn{margin:0}
+.btn[aria-disabled="true"]{opacity:.7}
+.gallery{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:14px 2px 10px;margin-top:10px}
+.gallery figure{margin:0;flex:0 0 auto;scroll-snap-align:start}
+.gallery img{display:block;width:170px;height:auto;border-radius:14px;border:1px solid var(--line);background:#000}
+@media(min-width:800px){.gallery img{width:200px}}
+.gallery figcaption{font-size:.8rem;color:var(--muted);margin-top:6px;text-align:center}
+.videos{display:grid;gap:16px;grid-template-columns:1fr;margin-top:16px}
+@media(min-width:800px){.videos{grid-template-columns:2.2fr 1fr;align-items:start}}
+.video{position:relative;width:100%;aspect-ratio:16/9;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#000}
+.video.vertical{aspect-ratio:9/16;max-width:320px;margin:0 auto}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.more{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:14px}
+.card{display:block;padding:18px;border:1px solid var(--line);border-radius:14px;background:var(--panel2);text-decoration:none;color:var(--text)} .card:hover{border-color:var(--accent2)}
+.card strong{display:block;margin-bottom:4px} .card span{color:var(--muted);font-size:.92rem}
+h2.section{font-size:1.6rem;margin:48px 0 4px}
+footer{margin-top:56px;padding:28px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+footer a{margin-right:14px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<h1>Tweak Apps</h1>
-<div class="app"><h2>PennyPing</h2><p>Simple subscription tracker. <a href="/pennyping/privacy.html">Privacy policy</a></p></div>
-<div class="app"><h2>Zesty Swap</h2><p>Juicy match-3 puzzle game. <a href="/zestyswap/privacy.html">Privacy policy</a></p></div>
-<div class="app"><img src="/stormsaucer/icon.png" alt="Storm Saucer icon"><h2>Storm Saucer</h2><p>Endless UFO flyer: drag to steer your saucer through four biomes, dodge the storm, unlock badass legendary skins and power up with upgrades. <a href="/stormsaucer/privacy.html">Privacy policy</a></p><p class="soon">Coming soon to Google Play</p></div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="/">Tweak<span>.</span></a>
+<nav aria-label="Main"><a href="#zestyswap">Zesty Swap</a><a href="#stormsaucer">Storm Saucer</a><a href="#pennyping">PennyPing</a><a href="#more">More</a><a class="cta" href="#contact">Contact</a></nav>
+</div></header>
+<main id="main">
+<div class="hero"><div class="wrap">
+<h1>Tweak — <em>Games &amp; Apps</em></h1>
+<p>An indie studio crafting juicy, polished mobile games and genuinely useful little apps. No clutter, no dark patterns: just things that are fun to play and nice to use.</p>
+<a class="btn primary" href="#zestyswap">See the apps</a><a class="btn" href="https://www.youtube.com/@tweakfails" rel="noopener">▶ YouTube</a>
+<div class="icons" aria-hidden="true"><img src="/assets/zesty/icon.webp" alt="" width="64" height="64"><img src="/assets/storm/icon.webp" alt="" width="64" height="64"><img src="/assets/penny/icon.webp" alt="" width="64" height="64"></div>
+</div></div>
+<div class="wrap">
+
+<section class="app" id="zestyswap" aria-labelledby="zs-title">
+<div class="app-head"><img src="/assets/zesty/icon.webp" alt="Zesty Swap icon" width="88" height="88">
+<div><h2 id="zs-title">Zesty Swap</h2><p class="tag">Swap. Match. Squeeze!</p></div><span class="badge test">Closed testing</span></div>
+<div class="desc"><p>The juiciest match-3 puzzle in the orchard. Swap neighbouring fruit to line up three or more, set off chain reactions with fruit blasters, and squeeze every point out of 50 handcrafted levels.</p>
+<ul><li>Easy to pick up: swipe or tap to swap, cascades for bonus points</li><li>Line Blasters, bombs and combos for big splashy turns</li><li>Hints and auto-reshuffle so you never get stuck</li></ul></div>
+<div class="videos">
+<div><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/YkoBl6agdGA" title="Zesty Swap — official trailer" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></div>
+<div><div class="video vertical"><iframe src="https://www.youtube-nocookie.com/embed/Iv6VHG23qus" title="Zesty Swap — YouTube Short" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></div>
+</div>
+<div class="gallery" role="list" aria-label="Zesty Swap screenshots"><figure role="listitem"><img src="/assets/zesty/shot-1.webp" alt="Zesty Swap — Swap juicy fruit" width="360" height="640" loading="lazy" decoding="async"><figcaption>Swap juicy fruit</figcaption></figure><figure role="listitem"><img src="/assets/zesty/shot-2.webp" alt="Zesty Swap — Trigger fruit blasters" width="360" height="640" loading="lazy" decoding="async"><figcaption>Trigger fruit blasters</figcaption></figure><figure role="listitem"><img src="/assets/zesty/shot-3.webp" alt="Zesty Swap — Chain juicy cascades" width="360" height="640" loading="lazy" decoding="async"><figcaption>Chain juicy cascades</figcaption></figure><figure role="listitem"><img src="/assets/zesty/shot-4.webp" alt="Zesty Swap — 50 handcrafted levels" width="360" height="640" loading="lazy" decoding="async"><figcaption>50 handcrafted levels</figcaption></figure><figure role="listitem"><img src="/assets/zesty/shot-5.webp" alt="Zesty Swap — Earn 3 stars" width="360" height="640" loading="lazy" decoding="async"><figcaption>Earn 3 stars</figcaption></figure><figure role="listitem"><img src="/assets/zesty/shot-6.webp" alt="Zesty Swap — 8 juicy boosters" width="360" height="640" loading="lazy" decoding="async"><figcaption>8 juicy boosters</figcaption></figure></div>
+<div class="links"><a class="btn primary" href="https://play.google.com/store/apps/details?id=com.jaduckworth.zestyswap" rel="noopener">Google Play (coming soon)</a><a class="btn" href="https://youtu.be/YkoBl6agdGA" rel="noopener">Watch trailer</a><a class="btn" href="/zestyswap/privacy.html">Privacy policy</a></div>
+</section>
+
+<section class="app" id="stormsaucer" aria-labelledby="ss-title">
+<div class="app-head"><img src="/assets/storm/icon.webp" alt="Storm Saucer icon" width="88" height="88">
+<div><h2 id="ss-title">Storm Saucer</h2><p class="tag">Drag. Dodge. Destroy the boss.</p></div><span class="badge soon">Coming soon</span></div>
+<div class="desc"><p>Pilot a flying saucer under a raging storm. Just drag to steer, and lift your finger to hover. Fly through eight hand-drawn biomes, each a level with its own hazards and a themed boss waiting at the end, or chase high scores in Endless.</p>
+<ul><li>8 biome levels with bosses: Arctic Peaks, Pine Wilds, Ember Dunes, War Zone, Shark Sea, Neon Skyline, Toxic Wastes and Crystal Caverns</li><li>Shield, Laser, EMP Burst and Boost abilities, upgradable in the Hangar</li><li>Earn up to 3 stars per level, unlock legendary animated saucer skins</li></ul></div>
+<div class="gallery" role="list" aria-label="Storm Saucer screenshots"><figure role="listitem"><img src="/assets/storm/arctic-peaks.webp" alt="Storm Saucer — Arctic Peaks" width="360" height="760" loading="lazy" decoding="async"><figcaption>Arctic Peaks</figcaption></figure><figure role="listitem"><img src="/assets/storm/pine-wilds.webp" alt="Storm Saucer — Pine Wilds" width="360" height="760" loading="lazy" decoding="async"><figcaption>Pine Wilds</figcaption></figure><figure role="listitem"><img src="/assets/storm/ember-dunes.webp" alt="Storm Saucer — Ember Dunes" width="360" height="760" loading="lazy" decoding="async"><figcaption>Ember Dunes</figcaption></figure><figure role="listitem"><img src="/assets/storm/war-zone.webp" alt="Storm Saucer — War Zone" width="360" height="760" loading="lazy" decoding="async"><figcaption>War Zone</figcaption></figure><figure role="listitem"><img src="/assets/storm/shark-sea.webp" alt="Storm Saucer — Shark Sea" width="360" height="760" loading="lazy" decoding="async"><figcaption>Shark Sea</figcaption></figure><figure role="listitem"><img src="/assets/storm/neon-skyline.webp" alt="Storm Saucer — Neon Skyline" width="360" height="760" loading="lazy" decoding="async"><figcaption>Neon Skyline</figcaption></figure><figure role="listitem"><img src="/assets/storm/toxic-wastes.webp" alt="Storm Saucer — Toxic Wastes" width="360" height="760" loading="lazy" decoding="async"><figcaption>Toxic Wastes</figcaption></figure><figure role="listitem"><img src="/assets/storm/crystal-caverns.webp" alt="Storm Saucer — Crystal Caverns" width="360" height="760" loading="lazy" decoding="async"><figcaption>Crystal Caverns</figcaption></figure></div>
+<div class="links"><span class="btn" aria-disabled="true">Google Play (coming soon)</span><a class="btn" href="/stormsaucer/privacy.html">Privacy policy</a></div>
+</section>
+
+<section class="app" id="pennyping" aria-labelledby="pp-title">
+<div class="app-head"><img src="/assets/penny/icon.webp" alt="PennyPing icon" width="88" height="88">
+<div><h2 id="pp-title">PennyPing</h2><p class="tag">Track every penny.</p></div><span class="badge soon">Coming soon</span></div>
+<div class="desc"><p>A clean, private subscription tracker. See what you really spend each month, get a ping before every renewal, and cancel the ones you forgot about. Works fully offline, with no account required.</p>
+<ul><li>Monthly and yearly spend at a glance</li><li>Renewal reminders you control</li><li>Light and dark themes, quick-add for popular services</li></ul></div>
+<div class="gallery" role="list" aria-label="PennyPing screenshots"><figure role="listitem"><img src="/assets/penny/shot-1.webp" alt="PennyPing — Monthly spend dashboard" width="360" height="640" loading="lazy" decoding="async"><figcaption>Monthly spend dashboard</figcaption></figure><figure role="listitem"><img src="/assets/penny/shot-2.webp" alt="PennyPing — All subscriptions" width="360" height="640" loading="lazy" decoding="async"><figcaption>All subscriptions</figcaption></figure><figure role="listitem"><img src="/assets/penny/shot-3.webp" alt="PennyPing — Dark mode" width="360" height="640" loading="lazy" decoding="async"><figcaption>Dark mode</figcaption></figure><figure role="listitem"><img src="/assets/penny/shot-4.webp" alt="PennyPing — Renewal reminders" width="360" height="640" loading="lazy" decoding="async"><figcaption>Renewal reminders</figcaption></figure><figure role="listitem"><img src="/assets/penny/shot-5.webp" alt="PennyPing — PennyPing Pro" width="360" height="640" loading="lazy" decoding="async"><figcaption>PennyPing Pro</figcaption></figure><figure role="listitem"><img src="/assets/penny/shot-6.webp" alt="PennyPing — Quick add" width="360" height="640" loading="lazy" decoding="async"><figcaption>Quick add</figcaption></figure></div>
+<div class="links"><span class="btn" aria-disabled="true">Google Play (coming soon)</span><a class="btn" href="/pennyping/privacy.html">Privacy policy</a></div>
+</section>
+
+<h2 class="section" id="more">More from Tweak on GitHub</h2>
+<div class="more">
+<a class="card" href="https://github.com/tweak36/beale-cipher-1-analysis" rel="noopener"><strong>beale-cipher-1-analysis</strong><span>Exploratory statistical and geographical analysis of Beale Cipher 1</span></a>
+<a class="card" href="https://github.com/tweak36/research-papers" rel="noopener"><strong>research-papers</strong><span>Research artifacts, experiments and reproducible technical work</span></a>
+<a class="card" href="https://github.com/tweak36" rel="noopener"><strong>@tweak36 on GitHub</strong><span>Profile and all public projects</span></a>
+<a class="card" href="https://www.youtube.com/@tweakfails" rel="noopener"><strong>TweakFails on YouTube</strong><span>Trailers, builds and experiments</span></a>
+</div>
+</div>
+</main>
+<footer id="contact"><div class="wrap">
+<p><strong>Contact:</strong> <a href="mailto:tweakagent@gmail.com">tweakagent@gmail.com</a></p>
+<p><a href="https://www.youtube.com/@tweakfails" rel="noopener">YouTube</a><a href="https://github.com/tweak36" rel="noopener">GitHub</a><a href="/zestyswap/privacy.html">Zesty Swap privacy</a><a href="/stormsaucer/privacy.html">Storm Saucer privacy</a><a href="/pennyping/privacy.html">PennyPing privacy</a></p>
+<p>© 2026 Tweak. Google Play is a trademark of Google LLC.</p>
+</div></footer>
 </body>
 </html>
