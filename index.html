@@ -45,6 +45,7 @@ section.app{margin:28px 0;padding:28px;background:var(--panel);border:1px solid 
 .gallery figure{margin:0;flex:0 0 auto;scroll-snap-align:start}
 .gallery img{display:block;width:170px;height:auto;border-radius:14px;border:1px solid var(--line);background:#000}
 @media(min-width:800px){.gallery img{width:200px}}
+.gallery.wide img{width:300px} @media(min-width:800px){.gallery.wide img{width:400px}}
 .gallery figcaption{font-size:.8rem;color:var(--muted);margin-top:6px;text-align:center}
 .videos{display:grid;gap:16px;grid-template-columns:1fr;margin-top:16px}
 @media(min-width:800px){.videos{grid-template-columns:2.2fr 1fr;align-items:start}}
@@ -64,7 +65,7 @@ footer a{margin-right:14px}
 <a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap">
 <a class="brand" href="/"><img src="/assets/brand/logo-192.webp" alt="" width="32" height="32" style="vertical-align:middle;border-radius:50%;margin-right:8px">Tweak<span>.</span></a>
-<nav aria-label="Main"><a href="#zestyswap">Zesty Swap</a><a href="#stormsaucer">Storm Saucer</a><a href="#pennyping">PennyPing</a><a href="#more">More</a><a class="cta" href="#contact">Contact</a></nav>
+<nav aria-label="Main"><a href="#zestyswap">Zesty Swap</a><a href="#stormsaucer">Storm Saucer</a><a href="#trailtorque">Trail Torque</a><a href="#pennyping">PennyPing</a><a href="#more">More</a><a class="cta" href="#contact">Contact</a></nav>
 </div></header>
 <main id="main">
 <div class="hero"><div class="wrap">
@@ -99,6 +100,15 @@ footer a{margin-right:14px}
 <div class="links"><span class="btn" aria-disabled="true">Google Play (coming soon)</span><a class="btn" href="https://youtu.be/Xdj9Qfuv86k" rel="noopener">Watch trailer</a><a class="btn" href="/stormsaucer/privacy.html">Privacy policy</a></div>
 </section>
 
+<section class="app" id="trailtorque" aria-labelledby="tt-title">
+<div class="app-head"><img src="/assets/trail/icon.webp" alt="Trail Torque icon" width="88" height="88">
+<div><h2 id="tt-title">Trail Torque</h2><p class="tag">Climb. Upgrade. Conquer.</p></div><span class="badge soon">Coming soon</span></div>
+<div class="desc"><p>A physics hill-climb racer with real suspension. Balance on the gas and brake to crawl over ridges, plough through mud bogs, skate across ice and fly off mega ramps, then spend your coins on engines, tyres, shocks and NOS.</p>
+<ul><li>10 vehicles from Common to Legendary, from the Trail Scout to the Coffin Cruiser</li><li>12 drivers with their own perks, riding in the cab and tumbling as ragdolls</li><li>9 maps: Pine Greenway, Red Rock, Frostline, Moon, Volcanic, Sky Jump, Mega Ramp, Speed Run and Bog</li><li>Checkpoints that refuel, repair and refill NOS, plus jump and flip bonuses</li></ul></div>
+<div class="gallery wide" role="list" aria-label="Trail Torque screenshots"><figure role="listitem"><img src="/assets/trail/volcanic.webp" alt="Trail Torque: Volcanic ash run" width="720" height="324" loading="lazy" decoding="async"><figcaption>Volcanic ash</figcaption></figure><figure role="listitem"><img src="/assets/trail/bog.webp" alt="Trail Torque: Mud bog" width="720" height="324" loading="lazy" decoding="async"><figcaption>Mud bog</figcaption></figure><figure role="listitem"><img src="/assets/trail/frost.webp" alt="Trail Torque: Frostline jump" width="720" height="324" loading="lazy" decoding="async"><figcaption>Frostline</figcaption></figure><figure role="listitem"><img src="/assets/trail/garage.webp" alt="Trail Torque: Garage" width="720" height="324" loading="lazy" decoding="async"><figcaption>Garage upgrades</figcaption></figure><figure role="listitem"><img src="/assets/trail/driver.webp" alt="Trail Torque: Driver crew" width="720" height="324" loading="lazy" decoding="async"><figcaption>Driver crew</figcaption></figure><figure role="listitem"><img src="/assets/trail/menu.webp" alt="Trail Torque: Main menu" width="720" height="324" loading="lazy" decoding="async"><figcaption>Main menu</figcaption></figure></div>
+<div class="links"><span class="btn" aria-disabled="true">Google Play (coming soon)</span><a class="btn" href="/trailtorque/privacy.html">Privacy policy</a></div>
+</section>
+
 <section class="app" id="pennyping" aria-labelledby="pp-title">
 <div class="app-head"><img src="/assets/penny/icon.webp" alt="PennyPing icon" width="88" height="88">
 <div><h2 id="pp-title">PennyPing</h2><p class="tag">Track every penny.</p></div><span class="badge soon">Coming soon</span></div>
@@ -119,7 +129,7 @@ footer a{margin-right:14px}
 </main>
 <footer id="contact"><div class="wrap">
 <p><strong>Contact:</strong> <a href="mailto:tweakagent@gmail.com">tweakagent@gmail.com</a></p>
-<p><a href="https://www.youtube.com/@tweakfails" rel="noopener">YouTube</a><a href="https://github.com/tweak36" rel="noopener">GitHub</a><a href="/zestyswap/privacy.html">Zesty Swap privacy</a><a href="/stormsaucer/privacy.html">Storm Saucer privacy</a><a href="/pennyping/privacy.html">PennyPing privacy</a></p>
+<p><a href="https://www.youtube.com/@tweakfails" rel="noopener">YouTube</a><a href="https://github.com/tweak36" rel="noopener">GitHub</a><a href="/zestyswap/privacy.html">Zesty Swap privacy</a><a href="/stormsaucer/privacy.html">Storm Saucer privacy</a><a href="/trailtorque/privacy.html">Trail Torque privacy</a><a href="/pennyping/privacy.html">PennyPing privacy</a></p>
 <p>© 2026 Tweak. Google Play is a trademark of Google LLC.</p>
 </div></footer>
 </body>
