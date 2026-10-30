@@ -1,169 +1,184 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TWEAKFAILS | Games, Apps &amp; Chaos</title>
-<meta name="description" content="TWEAKFAILS LLC is a North Carolina indie studio building mobile games and apps (Trail Torque, now in testing, plus Zesty Swap, Storm Saucer and PennyPing in development) and the TWEAKFAILS YouTube channel.">
-<meta name="theme-color" content="#0b0d17">
-<meta property="og:title" content="TWEAKFAILS | Games, Apps &amp; Chaos">
-<meta property="og:description" content="Indie mobile games and apps in the works at TWEAKFAILS LLC: Trail Torque (in testing), Zesty Swap, Storm Saucer and PennyPing (in development). Plus silly Blender shorts on the TWEAKFAILS YouTube channel.">
+<title>TWEAKFAILS | Indie games, apps and shorts</title>
+<meta name="description" content="TWEAKFAILS is an indie studio from North Carolina making mobile games, useful little apps and animated shorts starring Tweak the robot. Trail Torque is in testing; Zesty Swap, Storm Saucer and PennyPing are in development.">
+<link rel="canonical" href="https://tweakfails.com/">
+<meta name="theme-color" content="#0b0920">
+<meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="TWEAKFAILS">
+<meta property="og:title" content="TWEAKFAILS | Indie games, apps and shorts">
+<meta property="og:description" content="Mobile games, useful little apps and animated shorts starring Tweak the robot. Trail Torque is in testing; Zesty Swap, Storm Saucer and PennyPing are in development.">
+<meta property="og:url" content="https://tweakfails.com/">
 <meta property="og:image" content="https://tweakfails.com/assets/brand/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="TWEAKFAILS banner: Tweak the robot waving next to the TWEAKFAILS wordmark. Games, apps and shorts.">
-<meta property="og:url" content="https://tweakfails.com/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="TWEAKFAILS | Games, Apps &amp; Chaos">
-<meta name="twitter:description" content="Indie mobile games and apps in the works at TWEAKFAILS LLC, plus silly Blender shorts starring Tweak the robot.">
+<meta name="twitter:title" content="TWEAKFAILS | Indie games, apps and shorts">
+<meta name="twitter:description" content="Mobile games, useful little apps and animated shorts starring Tweak the robot.">
 <meta name="twitter:image" content="https://tweakfails.com/assets/brand/og-image.png">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png">
 <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
-<style>
-:root{--bg:#0b0d17;--panel:#141828;--panel2:#1b2036;--text:#eef1fb;--muted:#a3abc6;--line:#2a3150;--accent:#ffd34d;--accent2:#7cf7c8;--radius:18px}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Inter,sans-serif;background:var(--bg);color:var(--text)}
-a{color:var(--accent2)} a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
-.skip{position:absolute;left:-999px} .skip:focus{left:12px;top:12px;background:#000;padding:8px 12px;z-index:9}
-.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
-header.top{position:sticky;top:0;z-index:5;background:rgba(11,13,23,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
-.brand{font-weight:900;letter-spacing:.5px;font-size:1.2rem;color:var(--text);text-decoration:none} .brand span{color:var(--accent)}
-nav a{color:var(--muted);text-decoration:none;margin-left:16px;font-weight:600;font-size:.95rem} nav a:hover{color:var(--text)}
-@media(max-width:560px){nav a:not(.cta){display:none}}
-.hero{padding:40px 0 40px;background:radial-gradient(800px 400px at 15% 0%,#2a2260 0,transparent 60%),radial-gradient(700px 400px at 90% 10%,#0f4a46 0,transparent 60%)}
-.hero h1{font-size:clamp(2.2rem,6vw,4rem);line-height:1.05;margin:0 0 14px;letter-spacing:-1px}
-.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--accent),#ff8a5b);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p{color:var(--muted);font-size:1.15rem;max-width:640px;margin:0 0 26px}
-.icons{display:flex;gap:14px;margin-top:28px} .icons img{width:64px;height:64px;border-radius:16px;box-shadow:0 8px 24px #0008}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;font-weight:800;text-decoration:none;border:1px solid var(--line);color:var(--text);background:var(--panel2)}
-.btn.primary{background:var(--accent);color:#1a1405;border-color:transparent} .btn+.btn{margin-left:10px}
-section.app{margin:28px 0;padding:28px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius)}
-.app-head{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
-.app-head img{width:88px;height:88px;border-radius:22px;box-shadow:0 10px 30px #0009}
-.app-head h2{margin:0;font-size:1.8rem} .tag{margin:2px 0 0;color:var(--accent);font-weight:700}
-.badge{display:inline-block;font-size:.78rem;font-weight:800;letter-spacing:.4px;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-left:auto}
-.badge.dev{background:#1f2347;color:#b9c2ff;border:1px solid #3a4280}
-.badge.test{background:#3a2e08;color:var(--accent);border:1px solid #6b5410}
-.desc{color:#d3d8ea;max-width:820px} .desc ul{padding-left:20px;margin:8px 0}
-.links{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 4px} .links .btn{margin:0}
-.btn[aria-disabled="true"]{opacity:.7}
-.gallery{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:14px 2px 10px;margin-top:10px}
-.gallery figure{margin:0;flex:0 0 auto;scroll-snap-align:start}
-.gallery img{display:block;width:170px;height:auto;border-radius:14px;border:1px solid var(--line);background:#000}
-@media(min-width:800px){.gallery img{width:200px}}
-.gallery.wide img{width:300px} @media(min-width:800px){.gallery.wide img{width:400px}}
-.gallery figcaption{font-size:.8rem;color:var(--muted);margin-top:6px;text-align:center}
-.videos{display:grid;gap:16px;grid-template-columns:1fr;margin-top:16px}
-@media(min-width:800px){.videos{grid-template-columns:2.2fr 1fr;align-items:start}}
-.video{position:relative;width:100%;aspect-ratio:16/9;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#000}
-.video.vertical{aspect-ratio:9/16;max-width:320px;margin:0 auto}
-.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.more{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:14px}
-.card{display:block;padding:18px;border:1px solid var(--line);border-radius:14px;background:var(--panel2);text-decoration:none;color:var(--text)} .card:hover{border-color:var(--accent2)}
-.card strong{display:block;margin-bottom:4px} .card span{color:var(--muted);font-size:.92rem}
-h2.section{font-size:1.6rem;margin:48px 0 4px}
-.tw,.brand .tw{color:#29d3ff}.fl,.brand .fl{color:#ff4b2b}
-.brand img{display:block;height:40px;width:auto}
-.banner{display:block;width:100%;background:#1c1440;line-height:0;border-bottom:1px solid var(--line)}
-.banner img{display:block;width:100%;max-width:2560px;height:auto;margin:0 auto}
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-section.about{margin:28px 0;padding:28px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius)}
-section.about h2{margin-top:0}
-footer{margin-top:56px;padding:28px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
-footer a{margin-right:14px}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style>
+<link rel="preload" href="/assets/fonts/outfit-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"TWEAKFAILS LLC","alternateName":"TWEAKFAILS","url":"https://tweakfails.com/","logo":"https://tweakfails.com/assets/brand/tweakfails-icon-512.png","email":"support@tweakfails.com","sameAs":["https://www.youtube.com/@tweakfails"]}</script>
+<script src="/assets/js/site.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="top"><div class="wrap">
-<a class="brand" href="/"><img src="/assets/brand/tweakfails-wordmark-80h.png" srcset="/assets/brand/tweakfails-wordmark-80h.png 1x, /assets/brand/tweakfails-wordmark-160h.png 2x" alt="TWEAKFAILS" width="125" height="40"></a>
-<nav aria-label="Main"><a href="#trailtorque">Trail Torque</a><a href="#zestyswap">Zesty Swap</a><a href="#stormsaucer">Storm Saucer</a><a href="#pennyping">PennyPing</a><a href="#youtube">YouTube</a><a href="#about">About</a><a class="cta" href="#contact">Contact</a></nav>
+<header class="site-header"><div class="wrap">
+<a class="logo" href="/" aria-label="TWEAKFAILS home"><img class="wordmark" src="/assets/brand/tweakfails-wordmark-80h.png" srcset="/assets/brand/tweakfails-wordmark-80h.png 1x, /assets/brand/tweakfails-wordmark-160h.png 2x" alt="TWEAKFAILS" width="137" height="44"></a>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Menu</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+<nav class="nav" id="site-nav" aria-label="Main"><a href="#games">Games &amp; Apps</a><a href="#watch">Shorts</a><a href="#about">About</a><a class="nav-cta" href="#contact">Contact</a></nav>
 </div></header>
+
 <main id="main">
-<div class="banner"><picture><source media="(max-width: 640px)" type="image/webp" srcset="/assets/brand/tweakfails-banner-mobile-540x486.webp 540w, /assets/brand/tweakfails-banner-mobile-1080x972.webp 1080w" sizes="100vw"><source type="image/webp" srcset="/assets/brand/tweakfails-banner-1280x640.webp 1280w, /assets/brand/tweakfails-banner-2560x1280.webp 2560w" sizes="100vw"><img src="/assets/brand/tweakfails-banner-1280x640.webp" alt="TWEAKFAILS: Tweak the robot waving next to the TWEAKFAILS wordmark. Games, apps, shorts." width="1280" height="640" fetchpriority="high" decoding="async"></picture></div>
-<div class="hero"><div class="wrap">
-<h1><span class="sr-only">TWEAKFAILS: </span><em>Games, Apps &amp; Chaos</em></h1>
-<p>TWEAKFAILS LLC is an indie studio from North Carolina. We are building juicy, polished mobile games and genuinely useful little apps, and we run the TWEAKFAILS YouTube channel, home of Tweak the robot. No clutter, no dark patterns: just things that are fun to play, nice to use and fun to watch. Trail Torque is in testing now; everything else is in development.</p>
-<a class="btn primary" href="#trailtorque">See what we&#x27;re building</a><a class="btn" href="https://www.youtube.com/@tweakfails" rel="noopener">▶ TWEAKFAILS on YouTube</a>
-<div class="icons" aria-hidden="true"><img src="/assets/trail/icon-v2.webp" alt="" width="64" height="64"><img src="/assets/zesty/icon.webp" alt="" width="64" height="64"><img src="/assets/storm/icon.webp" alt="" width="64" height="64"><img src="/assets/penny/icon.webp" alt="" width="64" height="64"></div>
+<section class="hero" aria-labelledby="hero-title">
+<h1 id="hero-title" class="sr-only">TWEAKFAILS: Games, Apps, Shorts</h1>
+<div class="hero-art"><picture><source media="(max-width: 640px)" type="image/webp" srcset="/assets/brand/tweakfails-banner-mobile-540x486.webp 540w, /assets/brand/tweakfails-banner-mobile-1080x972.webp 1080w" sizes="100vw"><source type="image/webp" srcset="/assets/brand/tweakfails-banner-1280x640.webp 1280w, /assets/brand/tweakfails-banner-2560x1280.webp 2560w" sizes="100vw"><img src="/assets/brand/tweakfails-banner-1280x640.webp" alt="Tweak the blue robot waving beside the TWEAKFAILS wordmark. Games, Apps, Shorts." width="1280" height="640" fetchpriority="high" decoding="async"></picture></div>
+</section>
+
+<div class="hero-intro"><div class="wrap">
+<div class="hero-card">
+<div>
+<p class="eyebrow">Indie studio, North Carolina</p>
+<h2>Polished games. Useful apps. <span class="c">Robot</span> <span class="r">mishaps</span>.</h2>
+<p>We make mobile games and genuinely useful little apps, and we run the TWEAKFAILS YouTube channel, home of Tweak the accident-prone blue robot. No clutter, no dark patterns: just things that are fun to play, nice to use and fun to watch.</p>
+<div class="hero-actions"><a class="btn btn-primary" href="#games">See what we&rsquo;re building</a><a class="btn btn-yt" href="https://www.youtube.com/@tweakfails" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1z"/></svg>Watch on YouTube</a></div>
+</div>
+<ul class="lineup" aria-label="Current lineup">
+<li><a href="#trailtorque"><img src="/assets/trail/icon-v2.webp" alt="" width="48" height="48"><span><strong>Trail Torque</strong><small>In testing</small></span></a></li>
+<li><a href="#zestyswap"><img src="/assets/zesty/icon.webp" alt="" width="48" height="48"><span><strong>Zesty Swap</strong><small>In development</small></span></a></li>
+<li><a href="#stormsaucer"><img src="/assets/storm/icon.webp" alt="" width="48" height="48"><span><strong>Storm Saucer</strong><small>In development</small></span></a></li>
+<li><a href="#pennyping"><img src="/assets/penny/icon.webp" alt="" width="48" height="48"><span><strong>PennyPing</strong><small>In development</small></span></a></li>
+</ul>
+</div>
 </div></div>
-<div class="wrap">
 
-<section class="app" id="trailtorque" aria-labelledby="tt-title">
-<div class="app-head"><img src="/assets/trail/icon-v2.webp" alt="Trail Torque icon" width="88" height="88">
-<div><h2 id="tt-title">Trail Torque</h2><p class="tag">Climb. Upgrade. Conquer.</p></div><span class="badge test">In testing</span></div>
-<div class="desc"><p><strong>IN TESTING (v1.2.5)</strong>: not released yet. Trail Torque is in testing on Google Play and Apple TestFlight ahead of launch. A physics hill-climb racer with real suspension: balance gas and brake over ridges, through mud bogs, across ice and off mega ramps, then spend your coins on engines, tyres, shocks and NOS. Screenshots below are captured from the current test build.</p>
-<ul><li>14 maps, from Pine Greenway to the Haunted Graveyard, plus a hands-on Driving School tutorial</li><li>16 vehicles and 18 drivers, including the Bone Rattler, Warhog Tank, Trail Ripper dirt bike and the Headless Horseman</li><li>Equipment kits (road, mud, ice, tracks), upgrades and vehicle mastery</li><li>Offline cups against physical computer racers, ghost racing, trick popups, daily streaks and missions</li></ul></div>
+<section class="section" id="games" aria-labelledby="games-title"><div class="wrap">
+<div class="section-head"><div><p class="eyebrow">Our lineup</p><h2 id="games-title">Games &amp; Apps</h2></div><p>Four titles on the workbench. Nothing is in the stores yet, so there are no download links here until launch. Screenshots come from current builds.</p></div>
+
+<article class="app featured reveal" id="trailtorque" aria-labelledby="trailtorque-title" data-switcher>
+<div class="app-body">
+<div class="app-id"><img src="/assets/trail/icon-v2.webp" alt="Trail Torque app icon" width="72" height="72"><div><h3 id="trailtorque-title">Trail Torque</h3><p class="tagline">Climb. Upgrade. Conquer.</p></div></div>
+<p><span class="status testing">In testing</span></p>
+<p class="desc">A physics hill-climb racer with real suspension. Balance gas and brake over ridges, through mud bogs, across ice and off mega ramps, then spend your coins on engines, tyres, shocks and NOS. Not released yet: Trail Torque is in testing on Google Play and Apple TestFlight ahead of launch.</p>
+<ul class="features">
+<li>14 maps, from Pine Greenway to the Haunted Graveyard, plus a hands-on Driving School tutorial</li>
+<li>16 vehicles and 18 drivers, including the Bone Rattler, Warhog Tank and the Headless Horseman</li>
+<li>Equipment kits for road, mud, ice and tracks, plus upgrades and vehicle mastery</li>
+<li>Offline cups against computer racers, ghost racing, trick popups, daily streaks and missions</li>
+</ul>
+<div class="app-actions"><a class="btn btn-sm" href="https://youtu.be/iZNxUe3X47M" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>Watch trailer</a><a class="btn btn-sm btn-ghost" href="/trailtorque/privacy.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/></svg>Privacy policy</a></div>
+</div>
+<div class="app-media">
+<figure class="main-shot" style="margin:0"><img src="/assets/trail/v2-graveyard.webp" alt="Trail Torque test build. Haunted Graveyard: Bone Rattler and the Headless Horseman" width="800" height="450" loading="lazy" decoding="async"><figcaption>Haunted Graveyard: Bone Rattler and the Headless Horseman</figcaption></figure>
+<ul class="strip landscape" aria-label="Trail Torque screenshots"><li><button type="button" aria-pressed="true" data-caption="Haunted Graveyard: Bone Rattler and the Headless Horseman" aria-label="Show screenshot: Haunted Graveyard: Bone Rattler and the Headless Horseman"><img src="/assets/trail/v2-graveyard.webp" alt="Trail Torque test build. Haunted Graveyard: Bone Rattler and the Headless Horseman" width="150" height="84" loading="lazy" decoding="async"></button></li><li><button type="button" aria-pressed="false" data-caption="Ember Caldera: lava falls and the Iron Hauler" aria-label="Show screenshot: Ember Caldera: lava falls and the Iron Hauler"><img src="/assets/trail/v2-volcanic.webp" alt="Trail Torque test build. Ember Caldera: lava falls and the Iron Hauler" width="150" height="84" loading="lazy" decoding="async"></button></li><li><button type="button" aria-pressed="false" data-caption="Pine Greenway: Titan 4x4" aria-label="Show screenshot: Pine Greenway: Titan 4x4"><img src="/assets/trail/v2-greenway.webp" alt="Trail Torque test build. Pine Greenway: Titan 4x4" width="150" height="84" loading="lazy" decoding="async"></button></li><li><button type="button" aria-pressed="false" data-caption="Red Rock Run: wheelie bonus in the Dust Rally" aria-label="Show screenshot: Red Rock Run: wheelie bonus in the Dust Rally"><img src="/assets/trail/v2-redrock.webp" alt="Trail Torque test build. Red Rock Run: wheelie bonus in the Dust Rally" width="150" height="84" loading="lazy" decoding="async"></button></li><li><button type="button" aria-pressed="false" data-caption="Frostline: Trail Ripper dirt bike" aria-label="Show screenshot: Frostline: Trail Ripper dirt bike"><img src="/assets/trail/v2-frostline.webp" alt="Trail Torque test build. Frostline: Trail Ripper dirt bike" width="150" height="84" loading="lazy" decoding="async"></button></li><li><button type="button" aria-pressed="false" data-caption="Moonlight Basin: Lunar Manta" aria-label="Show screenshot: Moonlight Basin: Lunar Manta"><img src="/assets/trail/v2-moon.webp" alt="Trail Torque test build. Moonlight Basin: Lunar Manta" width="150" height="84" loading="lazy" decoding="async"></button></li><li><button type="button" aria-pressed="false" data-caption="Sunny Shores: Sand Viper" aria-label="Show screenshot: Sunny Shores: Sand Viper"><img src="/assets/trail/v2-beach.webp" alt="Trail Torque test build. Sunny Shores: Sand Viper" width="150" height="84" loading="lazy" decoding="async"></button></li><li><button type="button" aria-pressed="false" data-caption="Garage: Bone Rattler and the Headless Horseman" aria-label="Show screenshot: Garage: Bone Rattler and the Headless Horseman"><img src="/assets/trail/v2-garage.webp" alt="Trail Torque test build. Garage: Bone Rattler and the Headless Horseman" width="150" height="84" loading="lazy" decoding="async"></button></li><li><button type="button" aria-pressed="false" data-caption="Map select: 14 maps" aria-label="Show screenshot: Map select: 14 maps"><img src="/assets/trail/v2-maps.webp" alt="Trail Torque test build. Map select: 14 maps" width="150" height="84" loading="lazy" decoding="async"></button></li><li><button type="button" aria-pressed="false" data-caption="Main menu" aria-label="Show screenshot: Main menu"><img src="/assets/trail/v2-menu.webp" alt="Trail Torque test build. Main menu" width="150" height="84" loading="lazy" decoding="async"></button></li></ul>
+<p class="strip-note">Captured from the current test build.</p>
+</div>
+</article>
+
+<div class="app-grid">
+<article class="app zesty reveal" id="zestyswap" aria-labelledby="zestyswap-title">
+<div class="fan" aria-hidden="true"><img src="/assets/zesty/shot-1.webp" alt="" width="360" height="640" loading="lazy" decoding="async"><img src="/assets/zesty/shot-2.webp" alt="" width="360" height="640" loading="lazy" decoding="async"><img src="/assets/zesty/shot-3.webp" alt="" width="360" height="640" loading="lazy" decoding="async"></div>
+<div class="app-body">
+<div class="app-id"><img src="/assets/zesty/icon.webp" alt="Zesty Swap app icon" width="72" height="72" loading="lazy" decoding="async"><div><h3 id="zestyswap-title">Zesty Swap</h3><p class="tagline">Swap. Match. Squeeze!</p></div></div>
+<p><span class="status dev">In development</span></p>
+<p class="desc">The juiciest match-3 puzzle in the orchard. Swap neighbouring fruit to line up three or more, set off chain reactions with fruit blasters, and squeeze every point out of 50 handcrafted levels.</p>
+<ul class="features"><li>Swipe or tap to swap, with cascades for bonus points</li><li>Line Blasters, bombs and combos for big splashy turns</li><li>Hints and auto-reshuffle so you never get stuck</li></ul>
+<details class="more-shots"><summary>All screenshots</summary><ul class="strip portrait" aria-label="Zesty Swap screenshots" tabindex="0"><li><img src="/assets/zesty/shot-1.webp" alt="Zesty Swap: Swap juicy fruit" width="360" height="640" loading="lazy" decoding="async"></li><li><img src="/assets/zesty/shot-2.webp" alt="Zesty Swap: Trigger fruit blasters" width="360" height="640" loading="lazy" decoding="async"></li><li><img src="/assets/zesty/shot-3.webp" alt="Zesty Swap: Chain juicy cascades" width="360" height="640" loading="lazy" decoding="async"></li><li><img src="/assets/zesty/shot-4.webp" alt="Zesty Swap: 50 handcrafted levels" width="360" height="640" loading="lazy" decoding="async"></li><li><img src="/assets/zesty/shot-5.webp" alt="Zesty Swap: Earn 3 stars" width="360" height="640" loading="lazy" decoding="async"></li><li><img src="/assets/zesty/shot-6.webp" alt="Zesty Swap: 8 juicy boosters" width="360" height="640" loading="lazy" decoding="async"></li></ul></details>
+<div class="app-actions"><a class="btn btn-sm" href="https://youtu.be/YkoBl6agdGA" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>Watch trailer</a><a class="btn btn-sm btn-ghost" href="/zestyswap/privacy.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/></svg>Privacy policy</a></div>
+</div>
+</article>
+<article class="app storm reveal" id="stormsaucer" aria-labelledby="stormsaucer-title">
+<div class="fan" aria-hidden="true"><img src="/assets/storm/v108-blackhole.webp" alt="" width="360" height="758" loading="lazy" decoding="async"><img src="/assets/storm/v108-boss.webp" alt="" width="360" height="758" loading="lazy" decoding="async"><img src="/assets/storm/v108-laser.webp" alt="" width="360" height="758" loading="lazy" decoding="async"></div>
+<div class="app-body">
+<div class="app-id"><img src="/assets/storm/icon.webp" alt="Storm Saucer app icon" width="72" height="72" loading="lazy" decoding="async"><div><h3 id="stormsaucer-title">Storm Saucer</h3><p class="tagline">Drag. Dodge. Destroy the boss.</p></div></div>
+<p><span class="status dev">In development</span></p>
+<p class="desc">Pilot a flying saucer under a raging storm. Drag to steer, lift your finger to hover, and fly through eight hand-drawn biomes, each with its own hazards and a themed boss at the end. Or chase high scores in Endless.</p>
+<ul class="features"><li>8 biome levels with bosses, from Arctic Peaks to Crystal Caverns</li><li>10 alien weapons, from laser and chain lightning to a black hole</li><li>10 animated alien pilots, legendary saucer skins and Hangar upgrades</li></ul>
+<details class="more-shots"><summary>All screenshots</summary><ul class="strip portrait" aria-label="Storm Saucer screenshots" tabindex="0"><li><img src="/assets/storm/v108-boss.webp" alt="Storm Saucer: Boss: Mech Titan" width="360" height="758" loading="lazy" decoding="async"></li><li><img src="/assets/storm/v108-blackhole.webp" alt="Storm Saucer: Black hole weapon" width="360" height="758" loading="lazy" decoding="async"></li><li><img src="/assets/storm/v108-laser.webp" alt="Storm Saucer: Laser beam" width="360" height="758" loading="lazy" decoding="async"></li><li><img src="/assets/storm/v108-flame.webp" alt="Storm Saucer: Flamethrower" width="360" height="758" loading="lazy" decoding="async"></li><li><img src="/assets/storm/v108-orbital.webp" alt="Storm Saucer: Orbital strike" width="360" height="758" loading="lazy" decoding="async"></li><li><img src="/assets/storm/v108-caves.webp" alt="Storm Saucer: Crystal Caverns" width="360" height="758" loading="lazy" decoding="async"></li><li><img src="/assets/storm/v108-dunes.webp" alt="Storm Saucer: Ember Dunes" width="360" height="758" loading="lazy" decoding="async"></li><li><img src="/assets/storm/v108-pilots.webp" alt="Storm Saucer: Alien pilots" width="360" height="758" loading="lazy" decoding="async"></li><li><img src="/assets/storm/v108-map.webp" alt="Storm Saucer: Level map" width="360" height="758" loading="lazy" decoding="async"></li></ul></details>
+<div class="app-actions"><a class="btn btn-sm" href="https://youtu.be/Xdj9Qfuv86k" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>Watch trailer</a><a class="btn btn-sm btn-ghost" href="/stormsaucer/privacy.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/></svg>Privacy policy</a></div>
+</div>
+</article>
+<article class="app penny reveal" id="pennyping" aria-labelledby="pennyping-title">
+<div class="fan" aria-hidden="true"><img src="/assets/penny/shot-2.webp" alt="" width="360" height="640" loading="lazy" decoding="async"><img src="/assets/penny/shot-1.webp" alt="" width="360" height="640" loading="lazy" decoding="async"><img src="/assets/penny/shot-4.webp" alt="" width="360" height="640" loading="lazy" decoding="async"></div>
+<div class="app-body">
+<div class="app-id"><img src="/assets/penny/icon.webp" alt="PennyPing app icon" width="72" height="72" loading="lazy" decoding="async"><div><h3 id="pennyping-title">PennyPing</h3><p class="tagline">Track every penny.</p></div></div>
+<p><span class="status dev">In development</span></p>
+<p class="desc">A clean, private subscription tracker. See what you really spend each month, get a ping before every renewal, and cancel the ones you forgot about. Works fully offline, with no account required.</p>
+<ul class="features"><li>Monthly and yearly spend at a glance</li><li>Renewal reminders you control</li><li>Light and dark themes, plus quick-add for popular services</li></ul>
+<details class="more-shots"><summary>All screenshots</summary><ul class="strip portrait" aria-label="PennyPing screenshots" tabindex="0"><li><img src="/assets/penny/shot-1.webp" alt="PennyPing: Monthly spend dashboard" width="360" height="640" loading="lazy" decoding="async"></li><li><img src="/assets/penny/shot-2.webp" alt="PennyPing: All subscriptions" width="360" height="640" loading="lazy" decoding="async"></li><li><img src="/assets/penny/shot-3.webp" alt="PennyPing: Dark mode" width="360" height="640" loading="lazy" decoding="async"></li><li><img src="/assets/penny/shot-4.webp" alt="PennyPing: Renewal reminders" width="360" height="640" loading="lazy" decoding="async"></li><li><img src="/assets/penny/shot-5.webp" alt="PennyPing: PennyPing Pro" width="360" height="640" loading="lazy" decoding="async"></li><li><img src="/assets/penny/shot-6.webp" alt="PennyPing: Quick add" width="360" height="640" loading="lazy" decoding="async"></li></ul></details>
+<div class="app-actions"><a class="btn btn-sm btn-ghost" href="/pennyping/privacy.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/></svg>Privacy policy</a></div>
+</div>
+</article>
+</div>
+</div></section>
+
+<section class="section alt" id="watch" aria-labelledby="watch-title"><div class="wrap">
+<div class="section-head"><div><p class="eyebrow">YouTube</p><h2 id="watch-title">Shorts &amp; trailers</h2></div><p>Animated Blender shorts starring Tweak, plus official trailers and Shorts for every TWEAKFAILS game.</p></div>
+<div class="watch">
+<aside class="channel reveal" aria-label="TWEAKFAILS channel">
+<img src="/assets/brand/tweak-badge-240.webp" srcset="/assets/brand/tweak-badge-240.webp 1x, /assets/brand/tweak-badge-480.webp 2x" alt="Tweak, the blue TWEAKFAILS robot, waving" width="150" height="157" loading="lazy" decoding="async">
+<h3>Meet Tweak</h3>
+<p>Tweak is our accident-prone little blue robot. Things rarely go to plan, and that is the whole show.</p>
+<span class="handle">@tweakfails</span>
+<div><a class="btn btn-yt" href="https://www.youtube.com/@tweakfails" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1z"/></svg>Visit the channel</a></div>
+</aside>
 <div class="videos">
-<div><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/iZNxUe3X47M" title="Trail Torque: official trailer" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></div>
-<div><div class="video vertical"><iframe src="https://www.youtube-nocookie.com/embed/XB2mQ5I4Xjg" title="Trail Torque: YouTube Short" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></div>
-</div>
-<div class="gallery wide" role="list" aria-label="Trail Torque screenshots"><figure role="listitem"><img src="/assets/trail/v2-graveyard.webp" alt="Trail Torque (test build): Haunted Graveyard: Bone Rattler + Headless Horseman" width="800" height="450" loading="lazy" decoding="async"><figcaption>Haunted Graveyard: Bone Rattler + Headless Horseman</figcaption></figure><figure role="listitem"><img src="/assets/trail/v2-volcanic.webp" alt="Trail Torque (test build): Ember Caldera: lava falls, Iron Hauler" width="800" height="450" loading="lazy" decoding="async"><figcaption>Ember Caldera: lava falls, Iron Hauler</figcaption></figure><figure role="listitem"><img src="/assets/trail/v2-greenway.webp" alt="Trail Torque (test build): Pine Greenway: Titan 4x4" width="800" height="450" loading="lazy" decoding="async"><figcaption>Pine Greenway: Titan 4x4</figcaption></figure><figure role="listitem"><img src="/assets/trail/v2-redrock.webp" alt="Trail Torque (test build): Red Rock Run: wheelie bonus, Dust Rally" width="800" height="450" loading="lazy" decoding="async"><figcaption>Red Rock Run: wheelie bonus, Dust Rally</figcaption></figure><figure role="listitem"><img src="/assets/trail/v2-frostline.webp" alt="Trail Torque (test build): Frostline: Trail Ripper dirt bike" width="800" height="450" loading="lazy" decoding="async"><figcaption>Frostline: Trail Ripper dirt bike</figcaption></figure><figure role="listitem"><img src="/assets/trail/v2-moon.webp" alt="Trail Torque (test build): Moonlight Basin: Lunar Manta" width="800" height="450" loading="lazy" decoding="async"><figcaption>Moonlight Basin: Lunar Manta</figcaption></figure><figure role="listitem"><img src="/assets/trail/v2-beach.webp" alt="Trail Torque (test build): Sunny Shores: Sand Viper" width="800" height="450" loading="lazy" decoding="async"><figcaption>Sunny Shores: Sand Viper</figcaption></figure><figure role="listitem"><img src="/assets/trail/v2-garage.webp" alt="Trail Torque (test build): Garage: Bone Rattler + Headless Horseman" width="800" height="450" loading="lazy" decoding="async"><figcaption>Garage: Bone Rattler + Headless Horseman</figcaption></figure><figure role="listitem"><img src="/assets/trail/v2-maps.webp" alt="Trail Torque (test build): Map select: 14 maps" width="800" height="450" loading="lazy" decoding="async"><figcaption>Map select: 14 maps</figcaption></figure><figure role="listitem"><img src="/assets/trail/v2-menu.webp" alt="Trail Torque (test build): Main menu" width="800" height="450" loading="lazy" decoding="async"><figcaption>Main menu</figcaption></figure></div>
-<div class="links"><span class="btn" aria-disabled="true">Coming soon</span><a class="btn" href="https://youtu.be/iZNxUe3X47M" rel="noopener">Watch trailer</a><a class="btn" href="/trailtorque/privacy.html">Privacy policy</a></div>
-</section>
-
-<section class="app" id="zestyswap" aria-labelledby="zs-title">
-<div class="app-head"><img src="/assets/zesty/icon.webp" alt="Zesty Swap icon" width="88" height="88">
-<div><h2 id="zs-title">Zesty Swap</h2><p class="tag">Swap. Match. Squeeze!</p></div><span class="badge dev">In development</span></div>
-<div class="desc"><p><strong>IN DEVELOPMENT</strong>: not released yet. The juiciest match-3 puzzle in the orchard. Swap neighbouring fruit to line up three or more, set off chain reactions with fruit blasters, and squeeze every point out of 50 handcrafted levels.</p>
-<ul><li>Easy to pick up: swipe or tap to swap, cascades for bonus points</li><li>Line Blasters, bombs and combos for big splashy turns</li><li>Hints and auto-reshuffle so you never get stuck</li></ul></div>
-<div class="videos">
-<div><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/YkoBl6agdGA" title="Zesty Swap: official trailer" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></div>
-<div><div class="video vertical"><iframe src="https://www.youtube-nocookie.com/embed/Iv6VHG23qus" title="Zesty Swap: YouTube Short" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></div>
-</div>
-<div class="gallery" role="list" aria-label="Zesty Swap screenshots"><figure role="listitem"><img src="/assets/zesty/shot-1.webp" alt="Zesty Swap: Swap juicy fruit" width="360" height="640" loading="lazy" decoding="async"><figcaption>Swap juicy fruit</figcaption></figure><figure role="listitem"><img src="/assets/zesty/shot-2.webp" alt="Zesty Swap: Trigger fruit blasters" width="360" height="640" loading="lazy" decoding="async"><figcaption>Trigger fruit blasters</figcaption></figure><figure role="listitem"><img src="/assets/zesty/shot-3.webp" alt="Zesty Swap: Chain juicy cascades" width="360" height="640" loading="lazy" decoding="async"><figcaption>Chain juicy cascades</figcaption></figure><figure role="listitem"><img src="/assets/zesty/shot-4.webp" alt="Zesty Swap: 50 handcrafted levels" width="360" height="640" loading="lazy" decoding="async"><figcaption>50 handcrafted levels</figcaption></figure><figure role="listitem"><img src="/assets/zesty/shot-5.webp" alt="Zesty Swap: Earn 3 stars" width="360" height="640" loading="lazy" decoding="async"><figcaption>Earn 3 stars</figcaption></figure><figure role="listitem"><img src="/assets/zesty/shot-6.webp" alt="Zesty Swap: 8 juicy boosters" width="360" height="640" loading="lazy" decoding="async"><figcaption>8 juicy boosters</figcaption></figure></div>
-<div class="links"><span class="btn" aria-disabled="true">Coming soon</span><a class="btn" href="https://youtu.be/YkoBl6agdGA" rel="noopener">Watch trailer</a><a class="btn" href="/zestyswap/privacy.html">Privacy policy</a></div>
-</section>
-
-<section class="app" id="stormsaucer" aria-labelledby="ss-title">
-<div class="app-head"><img src="/assets/storm/icon.webp" alt="Storm Saucer icon" width="88" height="88">
-<div><h2 id="ss-title">Storm Saucer</h2><p class="tag">Drag. Dodge. Destroy the boss.</p></div><span class="badge dev">In development</span></div>
-<div class="desc"><p><strong>IN DEVELOPMENT</strong>: not released yet. Pilot a flying saucer under a raging storm. Just drag to steer, and lift your finger to hover. Fly through eight hand-drawn biomes, each a level with its own hazards and a themed boss waiting at the end, or chase high scores in Endless.</p>
-<ul><li>8 biome levels with bosses: Arctic Peaks, Pine Wilds, Ember Dunes, War Zone, Shark Sea, Neon Skyline, Toxic Wastes and Crystal Caverns</li><li>10 alien weapons (laser, homing missiles, spread, chain lightning, plasma, saw, orbital strike, flamethrower, freeze ray, black hole) with FIRE and SWAP buttons</li><li>10 animated alien pilots, legendary saucer skins and Hangar upgrades</li><li>Bosses aim at you, so keep moving and keep firing</li></ul></div>
-<div class="videos"><div><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/Xdj9Qfuv86k" title="Storm Saucer: official trailer" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></div><div><div class="video vertical"><iframe src="https://www.youtube-nocookie.com/embed/PesXXaWET60" title="Storm Saucer: YouTube Short" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></div></div>
-<div class="gallery" role="list" aria-label="Storm Saucer screenshots"><figure role="listitem"><img src="/assets/storm/v108-blackhole.webp" alt="Storm Saucer: Black hole weapon" width="360" height="758" loading="lazy" decoding="async"><figcaption>Black hole weapon</figcaption></figure><figure role="listitem"><img src="/assets/storm/v108-laser.webp" alt="Storm Saucer: Laser beam" width="360" height="758" loading="lazy" decoding="async"><figcaption>Laser beam</figcaption></figure><figure role="listitem"><img src="/assets/storm/v108-boss.webp" alt="Storm Saucer: Boss: Mech Titan" width="360" height="758" loading="lazy" decoding="async"><figcaption>Boss: Mech Titan</figcaption></figure><figure role="listitem"><img src="/assets/storm/v108-flame.webp" alt="Storm Saucer: Flamethrower" width="360" height="758" loading="lazy" decoding="async"><figcaption>Flamethrower</figcaption></figure><figure role="listitem"><img src="/assets/storm/v108-orbital.webp" alt="Storm Saucer: Orbital strike" width="360" height="758" loading="lazy" decoding="async"><figcaption>Orbital strike</figcaption></figure><figure role="listitem"><img src="/assets/storm/v108-caves.webp" alt="Storm Saucer: Crystal Caverns" width="360" height="758" loading="lazy" decoding="async"><figcaption>Crystal Caverns</figcaption></figure><figure role="listitem"><img src="/assets/storm/v108-dunes.webp" alt="Storm Saucer: Ember Dunes" width="360" height="758" loading="lazy" decoding="async"><figcaption>Ember Dunes</figcaption></figure><figure role="listitem"><img src="/assets/storm/v108-pilots.webp" alt="Storm Saucer: Alien pilots" width="360" height="758" loading="lazy" decoding="async"><figcaption>Alien pilots</figcaption></figure><figure role="listitem"><img src="/assets/storm/v108-map.webp" alt="Storm Saucer: Level map" width="360" height="758" loading="lazy" decoding="async"><figcaption>Level map</figcaption></figure></div>
-<div class="links"><span class="btn" aria-disabled="true">Coming soon</span><a class="btn" href="https://youtu.be/Xdj9Qfuv86k" rel="noopener">Watch trailer</a><a class="btn" href="/stormsaucer/privacy.html">Privacy policy</a></div>
-</section>
-
-
-<section class="app" id="pennyping" aria-labelledby="pp-title">
-<div class="app-head"><img src="/assets/penny/icon.webp" alt="PennyPing icon" width="88" height="88">
-<div><h2 id="pp-title">PennyPing</h2><p class="tag">Track every penny.</p></div><span class="badge dev">In development</span></div>
-<div class="desc"><p><strong>IN DEVELOPMENT</strong>: not released yet. A clean, private subscription tracker. See what you really spend each month, get a ping before every renewal, and cancel the ones you forgot about. Works fully offline, with no account required.</p>
-<ul><li>Monthly and yearly spend at a glance</li><li>Renewal reminders you control</li><li>Light and dark themes, quick-add for popular services</li></ul></div>
-<div class="gallery" role="list" aria-label="PennyPing screenshots"><figure role="listitem"><img src="/assets/penny/shot-1.webp" alt="PennyPing: Monthly spend dashboard" width="360" height="640" loading="lazy" decoding="async"><figcaption>Monthly spend dashboard</figcaption></figure><figure role="listitem"><img src="/assets/penny/shot-2.webp" alt="PennyPing: All subscriptions" width="360" height="640" loading="lazy" decoding="async"><figcaption>All subscriptions</figcaption></figure><figure role="listitem"><img src="/assets/penny/shot-3.webp" alt="PennyPing: Dark mode" width="360" height="640" loading="lazy" decoding="async"><figcaption>Dark mode</figcaption></figure><figure role="listitem"><img src="/assets/penny/shot-4.webp" alt="PennyPing: Renewal reminders" width="360" height="640" loading="lazy" decoding="async"><figcaption>Renewal reminders</figcaption></figure><figure role="listitem"><img src="/assets/penny/shot-5.webp" alt="PennyPing: PennyPing Pro" width="360" height="640" loading="lazy" decoding="async"><figcaption>PennyPing Pro</figcaption></figure><figure role="listitem"><img src="/assets/penny/shot-6.webp" alt="PennyPing: Quick add" width="360" height="640" loading="lazy" decoding="async"><figcaption>Quick add</figcaption></figure></div>
-<div class="links"><span class="btn" aria-disabled="true">Coming soon</span><a class="btn" href="/pennyping/privacy.html">Privacy policy</a></div>
-</section>
-
-<h2 class="section" id="youtube">TWEAKFAILS on YouTube</h2>
-<section class="about" aria-labelledby="yt-title"><h2 id="yt-title" style="font-size:1.3rem">Silly Blender shorts featuring Tweak... and chaos</h2>
-<p class="desc">Meet Tweak, our accident-prone little blue robot. The TWEAKFAILS channel has animated Blender shorts starring Tweak, plus official trailers and Shorts for every TWEAKFAILS game.</p>
-<div class="links"><a class="btn primary" href="https://www.youtube.com/@tweakfails" rel="noopener">▶ Watch on YouTube</a></div></section>
-
-<h2 class="section" id="about">About TWEAKFAILS</h2>
-<section class="about" aria-label="About TWEAKFAILS LLC"><p class="desc">TWEAKFAILS LLC is a North Carolina limited liability company. It owns and develops Trail Torque (in testing) and Zesty Swap, Storm Saucer and PennyPing (in development), and produces the TWEAKFAILS YouTube channel.</p>
-<p class="desc">Privacy: <a href="/trailtorque/privacy.html">Trail Torque</a> · <a href="/zestyswap/privacy.html">Zesty Swap</a> · <a href="/stormsaucer/privacy.html">Storm Saucer</a> · <a href="/pennyping/privacy.html">PennyPing</a>. Questions: <a href="mailto:support@tweakfails.com">support@tweakfails.com</a></p></section>
-
-<h2 class="section" id="more">Also on GitHub</h2>
-<div class="more">
-<a class="card" href="https://github.com/tweak36/beale-cipher-1-analysis" rel="noopener"><strong>beale-cipher-1-analysis</strong><span>Exploratory statistical and geographical analysis of Beale Cipher 1</span></a>
-<a class="card" href="https://github.com/tweak36/research-papers" rel="noopener"><strong>research-papers</strong><span>Research artifacts, experiments and reproducible technical work</span></a>
-<a class="card" href="https://github.com/tweak36" rel="noopener"><strong>@tweak36 on GitHub</strong><span>Profile and all public projects</span></a>
-<a class="card" href="https://www.youtube.com/@tweakfails" rel="noopener"><strong>TWEAKFAILS on YouTube</strong><span>Blender shorts with Tweak, trailers and game Shorts</span></a>
+<h3>Official trailers</h3>
+<ul class="video-grid trailers"><li><a class="video" href="https://www.youtube.com/watch?v=iZNxUe3X47M" data-yt="iZNxUe3X47M" data-title="Trail Torque official trailer" rel="noopener"><img src="/assets/trail/v2-volcanic.webp" alt="" width="800" height="450" loading="lazy" decoding="async" style="object-position:center"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="vlabel"><small>Trailer</small>Trail Torque<span class="sr-only"> (plays Trail Torque official trailer on YouTube)</span></span></a></li><li><a class="video" href="https://www.youtube.com/watch?v=YkoBl6agdGA" data-yt="YkoBl6agdGA" data-title="Zesty Swap official trailer" rel="noopener"><img src="/assets/zesty/feature.webp" alt="" width="1024" height="500" loading="lazy" decoding="async" style="object-position:center"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="vlabel"><small>Trailer</small>Zesty Swap<span class="sr-only"> (plays Zesty Swap official trailer on YouTube)</span></span></a></li><li><a class="video" href="https://www.youtube.com/watch?v=Xdj9Qfuv86k" data-yt="Xdj9Qfuv86k" data-title="Storm Saucer official trailer" rel="noopener"><img src="/assets/storm/v108-boss.webp" alt="" width="360" height="758" loading="lazy" decoding="async" style="object-position:center 45%"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="vlabel"><small>Trailer</small>Storm Saucer<span class="sr-only"> (plays Storm Saucer official trailer on YouTube)</span></span></a></li></ul>
+<h3>Game Shorts</h3>
+<ul class="video-grid shorts"><li><a class="video" href="https://www.youtube.com/watch?v=XB2mQ5I4Xjg" data-yt="XB2mQ5I4Xjg" data-title="Trail Torque YouTube Short" rel="noopener"><img src="/assets/trail/v2-redrock.webp" alt="" width="800" height="450" loading="lazy" decoding="async" style="object-position:40% center"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="vlabel"><small>Short</small>Trail Torque<span class="sr-only"> (plays Trail Torque YouTube Short on YouTube)</span></span></a></li><li><a class="video" href="https://www.youtube.com/watch?v=Iv6VHG23qus" data-yt="Iv6VHG23qus" data-title="Zesty Swap YouTube Short" rel="noopener"><img src="/assets/zesty/shot-2.webp" alt="" width="360" height="640" loading="lazy" decoding="async" style="object-position:center"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="vlabel"><small>Short</small>Zesty Swap<span class="sr-only"> (plays Zesty Swap YouTube Short on YouTube)</span></span></a></li><li><a class="video" href="https://www.youtube.com/watch?v=PesXXaWET60" data-yt="PesXXaWET60" data-title="Storm Saucer YouTube Short" rel="noopener"><img src="/assets/storm/v108-laser.webp" alt="" width="360" height="758" loading="lazy" decoding="async" style="object-position:center"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="vlabel"><small>Short</small>Storm Saucer<span class="sr-only"> (plays Storm Saucer YouTube Short on YouTube)</span></span></a></li></ul>
 </div>
 </div>
+</div></section>
+
+<section class="section" id="about" aria-labelledby="about-title"><div class="wrap about">
+<div class="reveal">
+<p class="eyebrow">About</p>
+<h2 id="about-title">A small studio with a clumsy robot mascot</h2>
+<p class="lead">TWEAKFAILS LLC is an independent game and app studio based in North Carolina, USA.</p>
+<p>We own and develop Trail Torque (in testing) along with Zesty Swap, Storm Saucer and PennyPing (in development), and we produce the TWEAKFAILS YouTube channel. Each game gets its own art style, from painterly off-road landscapes to juicy fruit and stormy alien skies.</p>
+<p>Privacy policies for every title are linked below, and they are written in plain language.</p>
+</div>
+<div class="pillars reveal">
+<div class="pillar"><span class="ico" style="color:var(--cyan)"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 11h4M8 9v4M15 12h.01M18 10h.01M17.3 5H6.7a4 4 0 0 0-4 3.6L2 15a3 3 0 0 0 5.1 2.2L9 15h6l1.9 2.2A3 3 0 0 0 22 15l-.7-6.4A4 4 0 0 0 17.3 5z"/></svg></span><div><h3>Games that feel good</h3><p>Juicy feedback, real physics and polish in every tap.</p></div></div>
+<div class="pillar"><span class="ico" style="color:var(--amber)"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 4h16v16H4zM4 9h16M9 20V9"/></svg></span><div><h3>Apps that stay out of your way</h3><p>Clean, focused tools without clutter or dark patterns.</p></div></div>
+<div class="pillar"><span class="ico" style="color:var(--red)"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 6h13v12H3zM16 10l5-3v10l-5-3"/></svg></span><div><h3>Shorts worth a laugh</h3><p>Blender-animated mishaps starring Tweak the robot.</p></div></div>
+</div>
+</div></section>
+
+<section class="section" id="contact" aria-labelledby="contact-title" style="padding-top:0;padding-bottom:0"><div class="wrap">
+<div class="contact reveal">
+<div>
+<p class="eyebrow">Contact</p>
+<h2 id="contact-title">Say hello</h2>
+<p>Questions about our games or apps, privacy or data requests, or business inquiries: drop us a line and we will get back to you.</p>
+<a class="email" href="mailto:support@tweakfails.com">support@tweakfails.com</a>
+</div>
+<div class="contact-actions">
+<a class="btn btn-primary" href="mailto:support@tweakfails.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 6h18v12H3zM3 7l9 6 9-6"/></svg>Email us</a>
+<a class="btn btn-yt" href="https://www.youtube.com/@tweakfails" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1z"/></svg>YouTube</a>
+</div>
+</div>
+</div></section>
 </main>
-<footer id="contact"><div class="wrap">
-<p><strong>TWEAKFAILS LLC</strong> · North Carolina, USA · <a href="mailto:support@tweakfails.com">support@tweakfails.com</a></p>
-<p><a href="https://www.youtube.com/@tweakfails" rel="noopener">YouTube</a><a href="https://github.com/tweak36" rel="noopener">GitHub</a><a href="/zestyswap/privacy.html">Zesty Swap privacy</a><a href="/stormsaucer/privacy.html">Storm Saucer privacy</a><a href="/trailtorque/privacy.html">Trail Torque privacy</a><a href="/pennyping/privacy.html">PennyPing privacy</a></p>
-<p>© 2026 TWEAKFAILS LLC. All rights reserved. Google Play is a trademark of Google LLC.</p>
+
+<footer class="site-footer"><div class="wrap">
+<div class="footer-grid">
+<div class="footer-brand"><img src="/assets/brand/tweakfails-wordmark-80h.png" srcset="/assets/brand/tweakfails-wordmark-80h.png 1x, /assets/brand/tweakfails-wordmark-160h.png 2x" alt="TWEAKFAILS" width="125" height="40" loading="lazy"><p>Games, apps and shorts from North Carolina, starring Tweak the robot.</p></div>
+<div><h2>Studio</h2><ul><li><a href="/#games">Games &amp; Apps</a></li><li><a href="/#watch">Shorts</a></li><li><a href="/#about">About</a></li><li><a href="/#contact">Contact</a></li></ul></div>
+<div><h2>Privacy</h2><ul><li><a href="/trailtorque/privacy.html">Trail Torque</a></li><li><a href="/zestyswap/privacy.html">Zesty Swap</a></li><li><a href="/stormsaucer/privacy.html">Storm Saucer</a></li><li><a href="/pennyping/privacy.html">PennyPing</a></li></ul></div>
+<div><h2>Connect</h2><ul><li><a href="mailto:support@tweakfails.com">support@tweakfails.com</a></li><li><a href="https://www.youtube.com/@tweakfails" rel="noopener">YouTube</a></li></ul></div>
+</div>
+<div class="legal-line"><p>&copy; 2026 TWEAKFAILS LLC. All rights reserved.</p><p>Google Play is a trademark of Google LLC. App Store and TestFlight are trademarks of Apple Inc.</p></div>
 </div></footer>
 </body>
 </html>
