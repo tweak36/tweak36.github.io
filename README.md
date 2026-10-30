@@ -1,6 +1,6 @@
 # tweak36.github.io
 
-Website of TWEAKFAILS LLC (North Carolina): games, apps and the TWEAKFAILS YouTube channel, served at https://tweakfails.com (see `CNAME`).
+Website of TWEAKFAILS: games, apps and the TWEAKFAILS YouTube channel, served at https://tweakfails.com (see `CNAME`).
 
 Plain static HTML, CSS and a few lines of JS, no build step.
 
