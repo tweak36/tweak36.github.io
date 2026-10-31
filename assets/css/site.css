@@ -209,6 +209,8 @@ details.more-shots .strip{margin-top:12px}
 .site-footer a:hover{color:var(--text);text-decoration:underline}
 .legal-line{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin-top:44px;padding-top:24px;border-top:1px solid var(--line);font-size:.85rem}
 .legal-line p{margin:0}
+.legal-line .tm-lines{display:grid;gap:4px}
+@media (min-width:760px){.legal-line .tm-lines{text-align:right}}
 
 /* Reveal (only when JS is running) */
 .js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
