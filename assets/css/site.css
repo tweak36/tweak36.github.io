@@ -279,3 +279,13 @@ details.more-shots .strip{margin-top:12px}
 .legal ul{padding-left:1.3em} .legal li{margin:.35em 0}
 .legal em{color:#5d5b7a}
 @media (max-width:640px){.legal{padding:28px 22px;border-radius:18px}.legal-wrap{padding:0 14px}}
+
+/* Game page screenshot grid */
+.shot-grid{list-style:none;padding:0;margin:16px 0 8px;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.shot-grid li{margin:0}
+.shot-grid figure{margin:0}
+.shot-grid img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;border:1px solid var(--line-2)}
+.shot-grid figcaption{font-size:.82rem;color:var(--dim);margin-top:6px}
+.legal ul.shot-grid{padding:0;margin-left:0}
+.legal .shot-grid li{margin:0;padding:0}
+.legal .shot-grid li::before{content:none}

@@ -21,7 +21,7 @@
       b.addEventListener('click',function(){
         box.querySelectorAll('.strip button').forEach(function(o){o.setAttribute('aria-pressed','false');});
         b.setAttribute('aria-pressed','true');
-        var img=b.querySelector('img');main.src=img.getAttribute('src');main.alt=img.alt;if(cap)cap.textContent=b.dataset.caption||'';
+        var img=b.querySelector('img');if(b.dataset.srcset){main.srcset=b.dataset.srcset;}else{main.removeAttribute('srcset');}main.src=b.dataset.full||img.getAttribute('src');main.alt=img.alt;if(cap)cap.textContent=b.dataset.caption||'';
       });
     });
   });
